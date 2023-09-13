@@ -63,3 +63,40 @@ const getPlanetName = function (id) {
   }
 getPlanetName(undefined)
 */
+
+function greet(language) {
+  const database = {
+    english: "Welcome",
+    czech:"Vitejte",
+    danish:"Velkomst",
+    dutch:"Welkom",
+    estonian: "Tere tulemast",
+    finnish:"Tervetuloa",
+    flemish:"Welgekomen" ,
+    french: "Bienvenue",
+    german : "Willkommen",
+    irish: "Failte",
+    italian: "Benvenuto",
+    latvian: "Gaidits",
+    lithuanian: "Laukiamas",
+    polish: "Witamy",
+    spanish: "Bienvenido",
+    swedish: "Valkommen",
+    welsh: "Croeso",
+  }
+  const result = language in database
+  const databaseEntries = Object.entries(database)
+  for (const [i,k] of databaseEntries) {
+  if (language.toLowerCase() === i) {
+    console.log(`${k}, Your function should return '${k}'`);
+  }
+} 
+if (!result) {
+  console.log(database.english);
+}
+}
+greet("fygu")
+
+
+
+
